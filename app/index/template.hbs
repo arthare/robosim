@@ -1,0 +1,23 @@
+{{#each vars as |var|}}
+  {{var-slider name=var data=params}}
+{{/each}}
+
+<button {{action 'calculate'}}>Normal Match</button>
+<button {{action 'calculate_no_high'}}>Never use high goal</button>
+<button {{action 'reset'}}>Reset to defaults</button>
+{{#if lastTotal}}
+  <table>
+    <tr><td>Raw points per match</td><td>{{lastTotal.pts}}</td></tr>
+    <tr><td>Low goal points per match</td><td>{{lastTotal.lowPoints}}</td></tr>
+    <tr><td>High goal points per match</td><td>{{lastTotal.highPoints}}</td></tr>
+    <tr><td>Defense points per match</td><td>{{lastTotal.defensePoints}}</td></tr>
+    <tr><td>Castle Hits per match</td><td>{{lastTotal.castleHits}}</td></tr>
+    <tr><td>RPs (castle/defense) per match</td><td>{{lastTotal.rps}}</td></tr>
+    <tr><td>Active defenses per match</td><td>{{lastTotal.activeDefenses}}</td></tr>
+    <tr><td>Passive defenses per match</td><td>{{lastTotal.passiveDefenses}}</td></tr>
+  </table>
+  
+  <hr>
+  <h4>Sample Log</h4>
+  {{{sampleLog}}}
+{{/if}}

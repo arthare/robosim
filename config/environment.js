@@ -4,7 +4,7 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'robo-sim',
     environment: environment,
-    baseURL: '/',
+    baseURL: '/personal/robosim/',
     locationType: 'auto',
     EmberENV: {
       FEATURES: {
@@ -40,7 +40,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-
+    ENV.baseURL = '/personal/robosim/';
   }
 
   return ENV;
