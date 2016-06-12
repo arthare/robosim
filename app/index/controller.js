@@ -292,7 +292,7 @@ function shootBall(params, gameState, robotState) {
 export default Ember.Controller.extend({
   
   
-  // how much harder does the presense of defense make lining up and corraling balls?
+  // how much harder does the presence of defense make lining up and corraling balls?
   params: {
     defenderProbability: 0.5, // fraction of the time (0-1) that a courtyard defender is present
     defenseFactor: 2,  // how much harder does a defender make your scoring job (lineups and shoots)?
